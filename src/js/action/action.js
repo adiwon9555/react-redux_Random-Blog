@@ -18,14 +18,16 @@ export function getBlogs() {
     }
 }
 
-export function addBlog(data) {
+export function addBlog(data,callback) {
     return function (dispatch) {
         blogService.post("/blog",data)
             .then(res => {
                 dispatch({ type: BLOG_ADDED, payload: res.data })
+                callback()
             })
     }
 }
+
 
 export function upVote(id) {
     return function (dispatch) {

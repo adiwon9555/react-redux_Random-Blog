@@ -10,6 +10,7 @@ import {Link} from "react-router-dom"
 class Navbar extends Component {
     constructor() {
         super()
+        // this.textInput = React.createRef();
         this.state={
             post:""
         }
@@ -23,11 +24,14 @@ class Navbar extends Component {
     addPost(){
         const {post}=this.state
         const data={text:post}
-        this.props.addBlog(data);
+        this.props.addBlog(data,()=>{
+            this.props.history.push("/")
+        });
         this.setState({
             post:""
         })
-        this.props.history.push("/")
+        
+        
     }
 
     render() {
@@ -38,7 +42,7 @@ class Navbar extends Component {
                     <li className='l'><Link to="/user" >User</Link></li>
                     <li className='l'><Link to="/" >Home</Link></li>
                     <li className='l'><Link to="/about" >About</Link></li>
-                    <li className="active" data-toggle="modal" data-target="#exampleModal"><a >Add Post</a></li>
+                    <li className="active" data-toggle="modal"  data-target="#exampleModal"><a >Add Post</a></li>
                 </ul>
                 <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog" role="document">
@@ -52,12 +56,13 @@ class Navbar extends Component {
                             <div className="modal-body">
                                 <div className="form-group">
                                     <label htmlFor="ta">Enter Your Text</label>
-                                    <textarea autoFocus="true" required 
+                                    <textarea autoFocus={true} required 
                                     style={{ width: "27rem" }} 
                                     onChange={this.handlePostChange.bind(this)}
                                     value={this.state.post} 
                                     className="form-control" 
                                     id="ta" 
+                                    // ref={this.textInput}
                                     rows="5"></textarea>
                                 </div>
                             </div>

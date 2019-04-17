@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <>
         <div>
-          <Navbar {...this.state}/>
+          <Navbar {...this.state} {...this.props}/>
         </div>
         <div className="container" style={{paddingTop:"65px"}}>
           <Blogs/>

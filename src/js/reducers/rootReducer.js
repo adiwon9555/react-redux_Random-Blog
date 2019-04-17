@@ -38,7 +38,7 @@ function rootReducer(state = initialState, action) {
             })
             return Object.assign({}, state, {
                 blogs: newBlogs
-            })
+            }) 
         default:
             return state;
     }

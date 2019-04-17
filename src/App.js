@@ -5,6 +5,9 @@ import Navbar from './js/components/Navbar/Navbar';
 
 
 class App extends Component {
+  // componentDidMount(){
+  //   this.props.history.push('/blogs')
+  // }
   render() {
 
     return (
@@ -13,7 +16,7 @@ class App extends Component {
           <Navbar {...this.state}/>
         </div>
         <div className="container" style={{paddingTop:"65px"}}>
-          <Blogs />
+          <Blogs/>
         </div>
         
       </>

@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import styles from './Navbar.scss'
 import {addBlog} from "../../action/action"
 import { connect } from "react-redux"
+import {Link} from "react-router-dom"
 
 
 
@@ -26,6 +27,7 @@ class Navbar extends Component {
         this.setState({
             post:""
         })
+        this.props.history.push("/")
     }
 
     render() {
@@ -33,9 +35,9 @@ class Navbar extends Component {
         return (
             <>
                 <ul>
-                    <li className='l'><a >User</a></li>
-                    <li className='l'><a >Home</a></li>
-                    <li className='l'><a >About</a></li>
+                    <li className='l'><Link to="/user" >User</Link></li>
+                    <li className='l'><Link to="/" >Home</Link></li>
+                    <li className='l'><Link to="/about" >About</Link></li>
                     <li className="active" data-toggle="modal" data-target="#exampleModal"><a >Add Post</a></li>
                 </ul>
                 <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

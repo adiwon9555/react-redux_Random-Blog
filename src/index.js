@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router} from "react-router-dom"
+import { BrowserRouter as Router, Route} from "react-router-dom"
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -11,9 +11,10 @@ import routes from './js/routes';
 
 ReactDOM.render(
     <Provider store={store}>
-        <Router>
-            {routes}
-        </Router>
+            <Router>
+                <App/>
+            </Router>
+        
     </Provider>,
     document.getElementById('root'));
 

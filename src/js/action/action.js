@@ -1,4 +1,4 @@
-import { FOUND_BAD_WORD, BLOGS_LOADED, BLOG_ADDED, BLOG_UPDATED, BLOG_DELETED } from "../constants/action-types";
+import { FOUND_BAD_WORD, BLOGS_LOADED, BLOG_ADDED, BLOG_UPDATED, BLOG_DELETED, SIDEBAR_TOGGLE, ADDPOST_BUTTON_ENABLE } from "../constants/action-types";
 import blogService from "../services/blogService";
 
 
@@ -54,3 +54,20 @@ export function deleteBlog(id) {
             })
     }
 }
+
+export function toggleSidebar(flag) {
+    
+    
+    return {
+        type: SIDEBAR_TOGGLE,
+        payload:flag
+    }
+}
+
+export function toggleAddPostEnable(flag) {
+    return {
+        type: ADDPOST_BUTTON_ENABLE,
+        payload:flag
+    }
+}
+

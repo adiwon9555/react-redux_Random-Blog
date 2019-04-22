@@ -7,7 +7,7 @@ import About from './components/About/About';
 
 export default (
     <div>
-    <Route exact path='/' component={App}></Route>
+    <Route exact path='/' component={Blogs}></Route>
     {/* <Route path='/blogs' component={Blogs}></Route> */}
     <Route path='/user' component={User}></Route>
     <Route path='/about' component={About}></Route>

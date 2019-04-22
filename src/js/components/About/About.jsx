@@ -14,12 +14,7 @@ class About extends Component {
         
         return (
             <>
-            <div>
-                <Navbar {...this.state} {...this.props} />
-            </div>
-            <div className="container" style={{paddingTop:"65px"}}>
-                <div>About Page</div>
-            </div>
+            <div>About Page</div>
 
             </>
         )

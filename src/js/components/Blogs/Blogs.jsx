@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import { getBlogs,upVote, deleteBlog } from "../../action/action"
+import {Link,Redirect} from "react-router-dom"
 
 const mapStateToProps = (state) => {
     return { blogs: state.blogs };

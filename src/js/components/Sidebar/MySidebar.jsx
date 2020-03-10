@@ -31,7 +31,7 @@ class MySidebar extends Component {
         <Sidebar.Pushable as={Segment}>
           <Sidebar
             as={Menu}
-            animation='overlay'
+            animation='push'
             icon='labeled'
             inverted
             onHide={()=>this.props.toggleSidebar(false)}
@@ -40,16 +40,20 @@ class MySidebar extends Component {
             width='thin'
           >
             <Menu.Item as='a'>
-              <Icon name='home' />
-              Home
+              <Icon name='user' />
+              Aditya
             </Menu.Item>
             <Menu.Item as='a'>
-              <Icon name='gamepad' />
-              Games
+              <Icon name='blogger' />
+              Blogs
             </Menu.Item>
             <Menu.Item as='a'>
-              <Icon name='camera' />
-              Channels
+              <Icon name='star' />
+              Rating
+            </Menu.Item>
+            <Menu.Item as='a'>
+              <Icon name='settings' />
+              Settins
             </Menu.Item>
           </Sidebar>
 
